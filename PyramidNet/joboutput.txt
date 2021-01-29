@@ -1,0 +1,9 @@
+==> Preparing data..
+Files already downloaded and verified
+==> Making model..
+The number of parameters of model is 26970690
+Epoch: [0/66]| loss: 9.219 | acc: 0.000 | batch time: 14.861s
+Epoch: [20/66]| loss: 3.314 | acc: 11.049 | batch time: 0.550s
+Epoch: [40/66]| loss: 2.727 | acc: 15.136 | batch time: 0.562s
+Epoch: [60/66]| loss: 2.492 | acc: 17.967 | batch time: 0.556s
+Training time 0:00:51.129767

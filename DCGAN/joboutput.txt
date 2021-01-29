@@ -1,0 +1,99 @@
+Random Seed:  999
+Let's use 4 GPUs!
+DataParallel(
+  (module): Generator(
+    (main): Sequential(
+      (0): ConvTranspose2d(100, 512, kernel_size=(4, 4), stride=(1, 1), bias=False)
+      (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (2): ReLU(inplace=True)
+      (3): ConvTranspose2d(512, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+      (4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (5): ReLU(inplace=True)
+      (6): ConvTranspose2d(256, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+      (7): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (8): ReLU(inplace=True)
+      (9): ConvTranspose2d(128, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+      (10): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (11): ReLU(inplace=True)
+      (12): ConvTranspose2d(64, 3, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+      (13): Tanh()
+    )
+  )
+)
+DataParallel(
+  (module): Discriminator(
+    (main): Sequential(
+      (0): Conv2d(3, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+      (1): LeakyReLU(negative_slope=0.2, inplace=True)
+      (2): Conv2d(64, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+      (3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (4): LeakyReLU(negative_slope=0.2, inplace=True)
+      (5): Conv2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+      (6): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (7): LeakyReLU(negative_slope=0.2, inplace=True)
+      (8): Conv2d(256, 512, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1), bias=False)
+      (9): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (10): LeakyReLU(negative_slope=0.2, inplace=True)
+      (11): Conv2d(512, 1, kernel_size=(4, 4), stride=(1, 1), bias=False)
+      (12): Sigmoid()
+    )
+  )
+)
+Starting Training Loop...
+[0/5][0/533]    Loss_D: 1.8946  Loss_G: 3.6140  D(x): 0.4220    D(G(z)): 0.5262 / 0.0425
+[0/5][50/533]   Loss_D: 0.3530  Loss_G: 12.4838 D(x): 0.9303    D(G(z)): 0.1580 / 0.0000
+[0/5][100/533]  Loss_D: 0.0731  Loss_G: 8.3225  D(x): 0.9969    D(G(z)): 0.0542 / 0.0030
+[0/5][150/533]  Loss_D: 0.6336  Loss_G: 6.1730  D(x): 0.6776    D(G(z)): 0.0216 / 0.0068
+[0/5][200/533]  Loss_D: 0.6567  Loss_G: 6.6123  D(x): 0.6482    D(G(z)): 0.0083 / 0.0066
+[0/5][250/533]  Loss_D: 0.7853  Loss_G: 6.9812  D(x): 0.8739    D(G(z)): 0.3973 / 0.0020
+[0/5][300/533]  Loss_D: 0.8006  Loss_G: 1.9227  D(x): 0.5671    D(G(z)): 0.0324 / 0.1925
+[0/5][350/533]  Loss_D: 0.9866  Loss_G: 6.9675  D(x): 0.8787    D(G(z)): 0.5094 / 0.0032
+[0/5][400/533]  Loss_D: 0.8701  Loss_G: 3.3541  D(x): 0.5775    D(G(z)): 0.0617 / 0.0673
+[0/5][450/533]  Loss_D: 0.5783  Loss_G: 4.1670  D(x): 0.6542    D(G(z)): 0.0321 / 0.0315
+[0/5][500/533]  Loss_D: 0.5441  Loss_G: 3.7301  D(x): 0.7480    D(G(z)): 0.1322 / 0.0400
+[1/5][0/533]    Loss_D: 0.6280  Loss_G: 5.9121  D(x): 0.9228    D(G(z)): 0.3736 / 0.0061
+[1/5][50/533]   Loss_D: 0.9643  Loss_G: 6.2647  D(x): 0.9303    D(G(z)): 0.5270 / 0.0036
+[1/5][100/533]  Loss_D: 0.7467  Loss_G: 3.3137  D(x): 0.6055    D(G(z)): 0.0262 / 0.0765
+[1/5][150/533]  Loss_D: 0.5453  Loss_G: 3.0802  D(x): 0.7359    D(G(z)): 0.1024 / 0.0775
+[1/5][200/533]  Loss_D: 0.5741  Loss_G: 3.2328  D(x): 0.7232    D(G(z)): 0.1158 / 0.0671
+[1/5][250/533]  Loss_D: 0.5591  Loss_G: 3.6357  D(x): 0.7139    D(G(z)): 0.0798 / 0.0490
+[1/5][300/533]  Loss_D: 0.4620  Loss_G: 4.2734  D(x): 0.8539    D(G(z)): 0.2185 / 0.0256
+[1/5][350/533]  Loss_D: 0.5335  Loss_G: 3.8273  D(x): 0.6881    D(G(z)): 0.0622 / 0.0442
+[1/5][400/533]  Loss_D: 0.5928  Loss_G: 5.4699  D(x): 0.8806    D(G(z)): 0.2976 / 0.0096
+[1/5][450/533]  Loss_D: 0.8065  Loss_G: 6.4617  D(x): 0.9264    D(G(z)): 0.4418 / 0.0034
+[1/5][500/533]  Loss_D: 1.4541  Loss_G: 4.5073  D(x): 0.4046    D(G(z)): 0.0082 / 0.0299
+[2/5][0/533]    Loss_D: 0.9024  Loss_G: 4.2271  D(x): 0.7258    D(G(z)): 0.3270 / 0.0262
+[2/5][50/533]   Loss_D: 0.6473  Loss_G: 3.6696  D(x): 0.7355    D(G(z)): 0.1874 / 0.0434
+[2/5][100/533]  Loss_D: 1.0268  Loss_G: 1.3797  D(x): 0.5002    D(G(z)): 0.0670 / 0.3276
+[2/5][150/533]  Loss_D: 1.1040  Loss_G: 6.8527  D(x): 0.9439    D(G(z)): 0.5765 / 0.0039
+[2/5][200/533]  Loss_D: 0.4084  Loss_G: 3.1404  D(x): 0.8072    D(G(z)): 0.1216 / 0.0692
+[2/5][250/533]  Loss_D: 0.4897  Loss_G: 3.1638  D(x): 0.7606    D(G(z)): 0.1358 / 0.0613
+[2/5][300/533]  Loss_D: 0.5078  Loss_G: 3.0509  D(x): 0.7010    D(G(z)): 0.0551 / 0.0744
+[2/5][350/533]  Loss_D: 0.4966  Loss_G: 4.4507  D(x): 0.8950    D(G(z)): 0.2754 / 0.0197
+[2/5][400/533]  Loss_D: 0.4038  Loss_G: 3.6328  D(x): 0.8518    D(G(z)): 0.1797 / 0.0427
+[2/5][450/533]  Loss_D: 0.3455  Loss_G: 4.3036  D(x): 0.8640    D(G(z)): 0.1452 / 0.0227
+[2/5][500/533]  Loss_D: 0.5072  Loss_G: 4.4150  D(x): 0.8584    D(G(z)): 0.2428 / 0.0250
+[3/5][0/533]    Loss_D: 0.4477  Loss_G: 2.2881  D(x): 0.7138    D(G(z)): 0.0291 / 0.1611
+[3/5][50/533]   Loss_D: 0.4836  Loss_G: 3.1970  D(x): 0.7452    D(G(z)): 0.1092 / 0.0641
+[3/5][100/533]  Loss_D: 1.1442  Loss_G: 5.5059  D(x): 0.9645    D(G(z)): 0.5753 / 0.0126
+[3/5][150/533]  Loss_D: 0.4346  Loss_G: 4.9752  D(x): 0.9264    D(G(z)): 0.2670 / 0.0122
+[3/5][200/533]  Loss_D: 0.7017  Loss_G: 5.8249  D(x): 0.8688    D(G(z)): 0.3395 / 0.0068
+[3/5][250/533]  Loss_D: 0.6195  Loss_G: 2.6869  D(x): 0.6467    D(G(z)): 0.0533 / 0.1085
+[3/5][300/533]  Loss_D: 0.4115  Loss_G: 2.8683  D(x): 0.7690    D(G(z)): 0.0934 / 0.0827
+[3/5][350/533]  Loss_D: 0.4277  Loss_G: 3.8893  D(x): 0.8821    D(G(z)): 0.2350 / 0.0309
+[3/5][400/533]  Loss_D: 0.9023  Loss_G: 1.6311  D(x): 0.5534    D(G(z)): 0.0670 / 0.3007
+[3/5][450/533]  Loss_D: 0.4788  Loss_G: 3.1535  D(x): 0.8057    D(G(z)): 0.1743 / 0.0673
+[3/5][500/533]  Loss_D: 0.4101  Loss_G: 2.8203  D(x): 0.7480    D(G(z)): 0.0638 / 0.0917
+[4/5][0/533]    Loss_D: 2.1725  Loss_G: 1.0994  D(x): 0.1918    D(G(z)): 0.0030 / 0.4187
+[4/5][50/533]   Loss_D: 0.3849  Loss_G: 3.1841  D(x): 0.8339    D(G(z)): 0.1528 / 0.0641
+[4/5][100/533]  Loss_D: 0.6641  Loss_G: 2.4820  D(x): 0.6582    D(G(z)): 0.1410 / 0.1209
+[4/5][150/533]  Loss_D: 0.4856  Loss_G: 3.2072  D(x): 0.7919    D(G(z)): 0.1645 / 0.0679
+[4/5][200/533]  Loss_D: 0.5245  Loss_G: 2.4071  D(x): 0.6938    D(G(z)): 0.0770 / 0.1251
+[4/5][250/533]  Loss_D: 1.1395  Loss_G: 4.8563  D(x): 0.8826    D(G(z)): 0.5662 / 0.0153
+[4/5][300/533]  Loss_D: 0.5997  Loss_G: 3.2519  D(x): 0.8003    D(G(z)): 0.2615 / 0.0627
+[4/5][350/533]  Loss_D: 0.5203  Loss_G: 2.3986  D(x): 0.7725    D(G(z)): 0.1911 / 0.1230
+[4/5][400/533]  Loss_D: 0.4364  Loss_G: 2.7314  D(x): 0.8320    D(G(z)): 0.1908 / 0.0904
+[4/5][450/533]  Loss_D: 0.4870  Loss_G: 2.8461  D(x): 0.7939    D(G(z)): 0.1884 / 0.0823
+[4/5][500/533]  Loss_D: 0.6658  Loss_G: 3.8544  D(x): 0.9137    D(G(z)): 0.3923 / 0.0311
+total time
+992.722377538681
